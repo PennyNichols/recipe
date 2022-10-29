@@ -1,0 +1,45 @@
+import axios from "axios";
+import React, { useState } from "react";
+import Header from "../../components/header/Header";
+import { MainContainer, RecipeCard } from "./HomeStyles";
+
+const APP_ID = process.env.REACT_APP_APP_ID;
+const APP_KEY = process.env.REACT_APP_APP_KEY;
+
+const mealTypes = ["Breakfast", "Lunch", "Dinner", "Snack", "Teatime"];
+
+const Home = () => {
+	const [query, setQuery] = useState("");
+	const [meal, setMeal] = useState(mealTypes[0].toLowerCase());
+	const [recipes, setRecipes] = useState([]);
+	console.log(recipes);
+	const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}&mealType=${meal}`;
+
+	const getData = async (e) => {
+        e.preventDefault()
+		const result = await axios.get(url);
+		setRecipes(result.data.hits);
+		setQuery("");
+	};
+
+
+	return (
+		<div>
+			<Header
+				meal={meal}
+				setMeal={setMeal}
+				query={query}
+				setQuery={setQuery}
+				mealTypes={mealTypes}
+				getData={getData}
+			/>
+			<MainContainer>
+				{ recipes.map((recipe, index) => {
+					console.log(recipe.recipe)
+				return(<RecipeCard key={index.toString()} recipe={recipe.recipe}/>)})}
+			</MainContainer>
+		</div>
+	);
+};
+
+export default Home;

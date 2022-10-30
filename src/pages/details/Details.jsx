@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import {
+  CupcakeContainer,
 	DetailContainer,
 	DetailPart,
 	HeaderContainer,
@@ -15,6 +16,7 @@ import {
   RecipeContainer,
 } from "./DetailsStyles";
 import dietSvg from "../../assets/diet.svg";
+import { GiCupcake } from "react-icons/gi";
 
 const Details = () => {
 	const {
@@ -35,7 +37,9 @@ const Details = () => {
             Servings : {recipe.yield}
 					</HeaderDetails>
 				</div>
-				<img src={dietSvg} alt="diet" />
+				<CupcakeContainer>
+          <GiCupcake style={{color: 'white', fontSize: '10rem'}}/>
+        </CupcakeContainer>
 			</HeaderContainer>
 			<DetailPart>
 

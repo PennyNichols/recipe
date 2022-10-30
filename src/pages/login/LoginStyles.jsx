@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const LoginContainer = styled.div`
-    background-image: url('https://picsum.photos/1600/900');
+    background-image: url('https://source.unsplash.com/random/900×700/?food');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -15,34 +15,53 @@ export const FormContainer = styled.div`
     width: 400px;
     min-width: 400px;
     height: 400px;
-    background-color: rgba(0,173,181,0.5);
+    background-color: #7000b5da;
     border-radius: 50%;
-    border: 2px solid #e1f1dd;
-    padding: 5px;
+    border: 2px solid #f1ddf0;
+    padding-bottom: 35px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin:auto;
+    perspective: 1000px;
+`
+
+export const Logo = styled.div`
+    transform: rotateY(360deg);
+    animation: rotateAnimation 8s linear infinite;
+
+    @keyframes rotateAnimation {
+        from {
+            transform: rotateY(360deg);
+        }
+        to {
+            transform: rotateY(0deg);        }
+    }
 `
 
 export const Header = styled.h1`
     color: white;
-    font-family: 'Girassol', sans-serif;
+    font-family: 'Dancing Script', cursive;
     font-size: 2rem;
 `;
 
 export const StyledInput = styled.input`
     
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 250px;
     border-radius: 5px;
-    font-family: 'Girassol', sans-serif;
-    background-color: rgba(0,0,0,0.6);
+    background-color: #ffffff50;
     border: none;
-    color: white;
+    color: #3f0762;
     margin: .5rem;
     text-indent: 20px;
+    &:focus{
+        outline: none;
+        border: none;
+    }
+
+    
 `;
 
 export const StyledForm = styled.form`
@@ -52,12 +71,15 @@ export const StyledForm = styled.form`
 
 export const StyledButton = styled.button`
     font-size: 1.5rem;
-    font-family: 'Girassol', sans-serif;
-    background-color: rgba(0,0,0,0.6);
+    font-family: 'Dancing Script', cursive;
+    background-color: #ffffff95;
     border: none;
-    color: white;
+    color: #3f0762;    padding: .5rem 0;
     margin: .5rem;
     cursor: pointer;
+    &:hover{
+        background-color: #fffffff1;
+    }
 `;
 
 export const StyledImage = styled.img`

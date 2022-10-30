@@ -5,7 +5,7 @@ export const DetailContainer = styled.div`
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    background: #00adb5;
+    background: #6e108b;
     min-height: calc(100vh-75px);
     padding: 5px;
 `;
@@ -18,20 +18,23 @@ export const DetailPart = styled.div`
     margin: 1rem;
     border: 1px solid white;
     border-radius: 5px;
-    background-color: #e1f1dd;
+    background-color: #eaddf1;
     position: relative;
 
     
 `;
 
 export const ImgContainer = styled.div`
-    border: 1px solid #00adb5;
+    border: 1px solid #3f0762;
+
     padding: 10px;
     border-radius: 3px;
     margin: 2rem;
     display: flex;
     margin: auto;
     img{
+        border: 1px solid #3f0762;
+
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -41,23 +44,38 @@ export const ImgContainer = styled.div`
 `;
 export const HeaderContainer = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding-right: 5rem;
     margin: 25px;
     font-size: 3rem;
-
-    img{
-        width: 200px;
-    }
+    perspective: 1000px;
 `;
 
+export const CupcakeContainer = styled.div`
+    background: transparent;
+    transform: rotateY(360deg);
+    animation: rotateAnimation 8s linear infinite;
+
+    @keyframes rotateAnimation {
+        from {
+            transform: rotateY(360deg);
+        }
+        to {
+            transform: rotateY(0deg);        }
+    }
+`
+
 export const HeaderLabel = styled.div`
-    font-size: 2rem;
-    font-weight: bolder;
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    margin-bottom: 2rem;
 `;
 
 export const HeaderDetails = styled.div`
     font-size: 1rem;
     text-transform: uppercase;
+    color: white;
 `;
 
 

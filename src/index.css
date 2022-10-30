@@ -4,17 +4,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Itim', cursive;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #00adb5;
+  background: #6e108b;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input::placeholder{
+  color: #3f0762;
 }

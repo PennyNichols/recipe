@@ -3,30 +3,32 @@ import styled from 'styled-components'
 
 export const Nav = styled.div`
     display: flex;
-    padding: 0 2rem;
+    padding: 0 1rem ;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    background-color: #e1f1dd;
+    background-color: #eaddf1;
     height: 75px;
     font-size: 2rem;
 `;
 
 export const Logo = styled(Link)`
-    padding: 1rem 0;
-    color: #393e46;
+    display: flex;
+    align-items: center;
+    padding: 0rem ;
+    padding-left: 1rem;
+    color: #3f0762;
     text-decoration: none;
     font-weight: 800;
-    font-size: 2rem;
+    font-size: 3rem;
     i{
-        font-family: "Girassol", sans-serif;
+        font-family: 'Dancing Script', cursive;
     }
     span{
-        font-family: "Girassol", sans-serif;
+        font-family: 'Dancing Script', cursive;
     }
     font-weight: 400;
-    font-size: 2rem;
-    color: #00adb5;
+    
 `;
 
 export const Hamburger = styled.div`
@@ -65,24 +67,23 @@ export const MenuLink = styled(NavLink)`
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    color: #02475e;
+    color: #47025e;
     transition: all 0.8s ease-in-out;
     font-size: 2rem;
-    font-family: 'Girassol', sans-serif;
-
+    font-family: 'Dancing Script', cursive;
     &:hover{
-        color: #00adb5;
-        font-weight: bold;
+        color: #8e00b5;
+        font-weight: bolder;
     }
 
     &.active{
-        color: #00adb5;
+        color: #8e00b5;
         font-weight: bold;
     }
 
     @media (max-width: 768px) {
-        background-color: #e1f1dd;
-        border: 1px solid #00adb5;
+        background-color: #f1ddee;
+        border: 1px solid #9400b5;
         border-radius: 10px;
         width: 100%;
     }

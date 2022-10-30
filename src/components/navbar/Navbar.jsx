@@ -2,14 +2,16 @@ import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Nav, Logo, Hamburger, Menu, MenuLink } from './NavbarStyles'
+import {GiCupcake} from 'react-icons/gi'
 
 const Navbar = ({setIsAuth, isAuth}) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <Nav>
       <Logo to='/'>
-        <i>{"<PennyNichols/>"}</i>
-        <span>recipe</span>
+        <span>Penny</span>
+        <GiCupcake />
+        <span>Nichols</span>
       </Logo>
       <Hamburger onClick={() => setIsOpen(!isOpen)}>
         <span/>

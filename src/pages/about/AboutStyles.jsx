@@ -7,11 +7,23 @@ export const AboutContainer = styled.div`
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 80px);
-    line-height: 2;
+    line-height: 1.5;
+    perspective: 1000px;
+    
+    h1{
+        color: #350c4f;
 
+    }
+
+    .first{
+        font-family: 'Dancing Script', cursive;
+        color: #ffffff78;
+        font-size: 3rem;
+    }
+    
     span{
         color: white;
-        font-family: "Girassol", sans-serif;
+        font-family: 'Dancing Script', cursive;
         font-size: 3rem;
     }
 `;
@@ -22,20 +34,33 @@ export const HeaderContainer = styled.div`
 
 export const InfoContainer = styled.div`
     text-align: right;
-    margin: 0 10px;
+    font-size: 1.2rem;
+    margin: 10px;
     max-width: 1000px;
-    border: 1px solid white;
     padding: 25px;
     border-radius: 5px;
     margin-bottom: 4rem;
+    background-color: #eaddf194;
+    font-weight: 300 !important;
+    color: white;
 
     a{
-        color: white;
+        color: #350c4f;
+        text-decoration: none;
     }
 `;
 
 export const StyledImage = styled.img`
-    width: 300px;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    width: 250px;
+    margin-top: 2rem;
+    transform: rotateY(360deg);
+    animation: rotateAnimation 8s linear infinite;
+
+    @keyframes rotateAnimation {
+        from {
+            transform: rotateY(360deg);
+        }
+        to {
+            transform: rotateY(0deg);        }
+    }
 `;

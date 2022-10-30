@@ -6,18 +6,19 @@ export const MainContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     height: fit-content;
+    background: #6e108b;
+
 `;
 
 export const RecipeCard = styled.div`
-    height: 300px;
-    background: #e1f1dd;
+    background-color: #eaddf1;
     padding: 5px;
     border-radius: 3px;
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 10px;
     box-shadow: 8px 8px 5px black;
 
@@ -33,10 +34,10 @@ export const RecipeImage = styled.img`
 `;
 
 export const Button = styled.button`
-    background-color: #00adb5;
-    padding: 5px;
+    background-color: #3f0762;
+    color: white;
+    padding: 8px;
     outline: none;
-    height: 2rem;
     border: none;
     margin: 10px;
     border-radius: 3px;
@@ -46,15 +47,31 @@ export const Button = styled.button`
 export const RecipeHeader = styled.h1`
     font-size: 1.5rem;
     text-align: center;
+    color: #3f0762;
+
 `;
 
 export const ImgDiv = styled.div`
     display: flex;
     justify-content: center;
-    margin: 50px;
+    margin: auto;
+    width: 20rem;
+    background: #6e108b;
+    transform: rotateY(360deg);
+    animation: rotateAnimation 8s linear infinite;
+
+    @keyframes rotateAnimation {
+        from {
+            transform: rotateY(360deg);
+        }
+        to {
+            transform: rotateY(0deg);        }
+    }
+
 `;
 
 export const HomeImg = styled.img`
     width: 80%;
     max-width: 750px;
+    
 `

@@ -27,7 +27,7 @@ const Home = () => {
 
 
 	return (
-		<div>
+		<div style={{perspective: '1000px'}}>
 			<Header
 				meal={meal}
 				setMeal={setMeal}

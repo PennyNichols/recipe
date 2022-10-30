@@ -39,7 +39,8 @@ export const Hamburger = styled.div`
     span{
         height: 4px;
         width: 25px;
-        background: #00adb5;
+        background-color: #47025e;
+
         margin-bottom: 4px;
         border-radius: 5px;
     }

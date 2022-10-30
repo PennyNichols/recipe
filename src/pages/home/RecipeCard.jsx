@@ -1,18 +1,26 @@
-import React from 'react'
-import { Button, RecipeCard as Card, RecipeHeader, RecipeImage } from './HomeStyles'
-import defaultImage from '../../assets/default-image.jpg'
+import React from "react";
+import {
+	Button,
+	RecipeCard,
+	RecipeHeader,
+	RecipeImage,
+} from "./HomeStyles";
+import defaultImage from "../../assets/default-image.jpg";
+import {useNavigate} from 'react-router-dom'
 
-const RecipeCard = ({recipe}) => {
-  
-  return (
-    <Card>
-      <RecipeHeader>
-        {recipe?.label}
-      </RecipeHeader>
-      <RecipeImage src={recipe?.image || defaultImage} alt='recipe' />
-      <Button>View More</Button>
-    </Card>
-  )
-}
 
-export default RecipeCard
+const RecipeCardComponent = ({ recipe }) => {
+  const navigate = useNavigate()
+  const clickHandler =() =>{
+    navigate('details', {state: {recipe}})
+  }
+	return (
+		<RecipeCard>
+			<RecipeHeader>{recipe?.label}</RecipeHeader>
+			<RecipeImage src={recipe?.image || defaultImage} alt="recipe" />
+			<Button onClick={clickHandler}>View More</Button>
+		</RecipeCard>
+	);
+};
+
+export default RecipeCardComponent;

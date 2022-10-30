@@ -18,6 +18,7 @@ const Login = ({ isAuth, setIsAuth }) => {
 		e.preventDefault();
 		setIsAuth(true);
 		navigate("/");
+		localStorage.setItem('Auth', 'true')
 	};
 	return (
 		<LoginContainer>

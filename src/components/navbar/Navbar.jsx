@@ -19,7 +19,7 @@ const Navbar = ({setIsAuth, isAuth}) => {
       <Menu isOpen={isOpen} onClick={() => setIsOpen(false)}>
         <MenuLink to="/about">About</MenuLink>
         <MenuLink as='a' href="https://github.com/PennyNichols" target="_blank" rel='noopener noreferrer'>GitHub</MenuLink>
-        { isAuth && <MenuLink to="/login" onClick={()=> setIsAuth(false)}>Log Out</MenuLink>}
+        { isAuth && <MenuLink to="/login" onClick={()=> {setIsAuth(false); localStorage.removeItem('Auth')}}>Log Out</MenuLink>}
         {!isAuth && <MenuLink to="/login">Log In</MenuLink>}
       </Menu>
     </Nav>

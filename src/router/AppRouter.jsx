@@ -8,8 +8,8 @@ import Login from "../pages/login/Login";
 import PrivateRouter from "./PrivateRouter";
 
 const AppRouter = () => {
-
-    const [isAuth, setIsAuth] = useState(false)
+    const auth = localStorage.getItem('Auth')
+    const [isAuth, setIsAuth] = useState(auth? true: false)
 
   return (
     <BrowserRouter>

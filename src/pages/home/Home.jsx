@@ -1,7 +1,10 @@
 import axios from "axios";
 import React, { useState } from "react";
 import Header from "../../components/header/Header";
-import { MainContainer, RecipeCard } from "./HomeStyles";
+import { HomeImg, ImgDiv, MainContainer } from "./HomeStyles";
+import RecipeCardComponent from "./RecipeCard";
+import homeSvg from '../../assets/home.svg';
+import {GiCupcake} from 'react-icons/gi';
 
 const APP_ID = process.env.REACT_APP_APP_ID;
 const APP_KEY = process.env.REACT_APP_APP_KEY;
@@ -33,11 +36,19 @@ const Home = () => {
 				mealTypes={mealTypes}
 				getData={getData}
 			/>
-			<MainContainer>
-				{ recipes.map((recipe, index) => {
-					console.log(recipe.recipe)
-				return(<RecipeCard key={index.toString()} recipe={recipe.recipe}/>)})}
-			</MainContainer>
+
+			{recipes.length > 0 ?( 
+				<MainContainer>
+					{ recipes.map((recipe, index) => {
+						console.log(recipe.recipe)
+					return(<RecipeCardComponent key={index.toString()} recipe={recipe.recipe}/>)})}
+				</MainContainer>
+			) : (
+				<ImgDiv>
+					<GiCupcake style={{fontSize: '20rem', color: 'white'}} />
+				</ImgDiv>
+			)
+		}
 		</div>
 	);
 };

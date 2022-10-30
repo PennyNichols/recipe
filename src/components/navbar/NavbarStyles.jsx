@@ -54,6 +54,7 @@ export const Menu = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    z-index: 1000;
     @media (max-width: 768px){
         overflow: hidden;
         flex-direction: column;

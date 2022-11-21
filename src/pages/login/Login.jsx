@@ -26,7 +26,7 @@ const Login = ({ isAuth, setIsAuth }) => {
 		<LoginContainer>
 			<FormContainer>
 				<Logo>
-					<GiCupcake style={{fontSize: '8rem', color:'white',}}/>
+					<GiCupcake className="login-cupcake" />
 				</Logo>
 				<Header>Penny Nichols</Header>
 				<StyledForm onSubmit={handleSubmit}>

@@ -61,6 +61,7 @@ export const Menu = styled.div`
         width: 100%;
         max-height: ${({isOpen}) => (isOpen ? "300px" : "0")};
         transition: max-height .7s;
+        margin-top: 15px;
     }
 `;
 
@@ -84,10 +85,11 @@ export const MenuLink = styled(NavLink)`
     }
 
     @media (max-width: 768px) {
-        background-color: #f1ddee;
+        background-color: #eaddf1;
         border: 1px solid #9400b5;
         border-radius: 10px;
         width: 100%;
+        margin-top: 10px;
     }
 
 `

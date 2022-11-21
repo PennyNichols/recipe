@@ -14,6 +14,9 @@ export const MainHeader = styled.h2`
     font-weight: 300;
     font-family: 'Dancing Script', cursive;
     color: white;
+    @media (max-width: 500px){
+        font-size: 3rem;
+    }
 `;
 
 export const FormContainer = styled.form`
@@ -27,7 +30,7 @@ export const FormContainer = styled.form`
 `;
 
 export const FoodInput = styled.input`
-    width: 15rem;
+    width: 8rem;
     border: none;
     border-radius: 3px;
     outline: none;
@@ -35,7 +38,10 @@ export const FoodInput = styled.input`
     margin: 5px;
     font-size: 2rem;
     background-color: #ffffffc6;
-`;
+    @media (max-width: 500px){
+        font-size: 1rem;
+    }
+    `;
 
 export const Button = styled.button`
     background-color: #ffffffc6;
@@ -54,6 +60,10 @@ export const Button = styled.button`
         transition: all .5s;
         color: #ffffffc6;
     }
+    
+    @media (max-width: 500px){
+        font-size: 1rem;
+    }
     `;
 
 export const Select = styled.select`
@@ -63,7 +73,7 @@ export const Select = styled.select`
     font-size: 2rem;
     color: #3f0762;
     background-color: #ffffffc6;
-
+    
     &:focus{
         border: none;
         outline: none;
@@ -72,6 +82,9 @@ export const Select = styled.select`
     option{
         color: #3f0762; 
         background-color: #ffffffc6 !important;
-
+        
     }
-`;
+    @media (max-width: 500px){
+        font-size: 1rem;
+    }
+    `;

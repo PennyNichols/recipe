@@ -56,7 +56,7 @@ const Details = () => {
               { recipe.ingredientLines.map((line, index) => {
                 return(
                   <IngredientsInfo>
-                    <p>{index+1} - </p>
+                    <p>{index+1} </p>
                     <p>{line}</p>
                   </IngredientsInfo>
               )})}

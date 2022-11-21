@@ -19,12 +19,18 @@ export const AboutContainer = styled.div`
         font-family: 'Dancing Script', cursive;
         color: #ffffff78;
         font-size: 3rem;
+        @media (max-width: 500px){
+            font-size: 2rem;
+        }
     }
     
     span{
         color: white;
         font-family: 'Dancing Script', cursive;
         font-size: 3rem;
+        @media (max-width: 500px){
+            font-size: 2rem;
+        }
     }
 `;
 
@@ -48,6 +54,10 @@ export const InfoContainer = styled.div`
         color: #350c4f;
         text-decoration: none;
     }
+
+    @media (max-width: 500px){
+        font-size: 1rem;
+    }
 `;
 
 export const StyledImage = styled.img`
@@ -62,5 +72,11 @@ export const StyledImage = styled.img`
         }
         to {
             transform: rotateY(0deg);        }
+    }
+
+    @media (max-width: 500px){
+        width: 150px;
+        margin-bottom: 2rem;
+        margin-top: 0;
     }
 `;

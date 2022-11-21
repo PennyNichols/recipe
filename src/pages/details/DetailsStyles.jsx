@@ -40,9 +40,9 @@ export const ImgContainer = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 250px;
+		max-width: 250px;
 		@media (max-width: 500px) {
-			width: 150px;
+            align-self: center;
 		}
 	}
 `;
@@ -100,7 +100,7 @@ export const OtherPart = styled.div`
         width: 250px;
         display: flex;
         flex-direction: column;
-        margin: 2rem auto 2rem auto;
+        margin: 1rem auto 1rem auto;
 }
 `;
 

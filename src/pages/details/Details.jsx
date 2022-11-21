@@ -43,9 +43,9 @@ const Details = () => {
 			</HeaderContainer>
 			<DetailPart>
 
-        <RecipeContainer>
-          <ImgContainer>
-            <img src={recipe.image} alt={recipe.label} />
+        <RecipeContainer style={{width: '100%'}}>
+          <ImgContainer style={{display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '0 auto 0 auto'}}>
+            <img  src={recipe.image} alt={recipe.label} />
           </ImgContainer>
 
 
